@@ -1,0 +1,19 @@
+# Ignorar arquivos de estado do Terraform
+*.tfstate
+*.tfstate.backup
+
+# Ignorar arquivos de bloqueio do Terraform
+*.lock.hcl
+
+# Ignorar diretório de módulos do Terraform
+.terraform/
+
+# Ignorar arquivos de saída do Terraform (exemplo de arquivos de plano)
+*.tfplan
+
+# Ignorar arquivos temporários e de cache
+*.tmp
+*.swp
+*.bak
+*.idea/
+*.vscode/

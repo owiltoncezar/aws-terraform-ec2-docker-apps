@@ -1,0 +1,8 @@
+profile       = "nome-do-profile-configurado-para-o-awscli"
+managed_by    = "Terraform"
+region        = "regiao-que-deseja-criar-o-recurso"
+name          = "nome-para-os-recursos(Instancia, Security Group, Key-par e etc.)"
+instance_type = "tipo-da-instância"
+volume_type   = "tipo-do-disco-ebs"
+volume_size   = "tamanho-do-disco-ebs"
+public_key    = "valor da chave publica válida no formato do OpenSSH"

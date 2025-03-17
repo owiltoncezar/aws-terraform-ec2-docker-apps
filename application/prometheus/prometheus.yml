@@ -1,0 +1,13 @@
+global:
+  scrape_interval: 5s # Intervalo de coleta de métricas
+
+scrape_configs:
+  # Configuração para coletar métricas da aplicação Flask
+  - job_name: "flask-app"
+    static_configs:
+      - targets: ["flask-app:5000"] # Endereço do Flask (ajuste conforme necessário)
+
+  # Configuração para coletar métricas da aplicação Node.js
+  - job_name: "node-app"
+    static_configs:
+      - targets: ["node-app:3000"] # Endereço do Node.js (ajuste conforme necessário)
