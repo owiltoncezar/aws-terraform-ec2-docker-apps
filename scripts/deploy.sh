@@ -27,8 +27,8 @@ install_infra() {
   fi
   echo "IP da EC2: $EC2_IP"
   
-  echo "Aguardando 60 segundos para garantir que a EC2 está pronta para conexões SSH..."
-  sleep 60
+  echo "Aguardando 30 segundos para garantir que a EC2 está pronta para conexões SSH..."
+  sleep 30
   
   # Instalar Docker e dependências
   echo "Instalando Docker e configurando o ambiente..."
@@ -57,8 +57,8 @@ EOF
   echo "Reiniciando a EC2 para aplicar permissões de grupo docker..."
   ssh -o StrictHostKeyChecking=no -i "$KEY_PATH" ubuntu@$EC2_IP "sudo reboot"
   
-  echo "Aguardando 40 segundos para a reinicialização..."
-  sleep 40
+  echo "Aguardando 30 segundos para a reinicialização..."
+  sleep 30
   
   # Copiar a pasta app para a EC2
   echo "Copiando aplicação para a EC2..."
@@ -74,7 +74,7 @@ EOF
   echo "Infraestrutura e aplicação implantadas com sucesso!"
 }
 
-# 5. Função para destruir a infraestrutura
+# Função para destruir a infraestrutura
 destroy_infra() {
   echo "Destruindo infraestrutura com Terraform..."
   cd "$INFRA_DIR"
@@ -82,7 +82,7 @@ destroy_infra() {
   echo "Infraestrutura destruída com sucesso!"
 }
 
-# 6. Executar a ação com base no parâmetro
+# Executar a ação com base no parâmetro
 case "$1" in
   install)
     install_infra
