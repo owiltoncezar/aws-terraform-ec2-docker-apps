@@ -62,7 +62,7 @@ Este diagrama mostra o processo de atualização e instalação do projeto:
 
 ### Clone o Repositório
 ```bash
-git clone https://github.com/owiltoncezar/terraform-configs-poc.gitt
+git clone https://github.com/owiltoncezar/aws-terraform-ec2-docker-apps.git
 cd "pasta-onde-clonou"
 ```
 ### 🛠️ Configuração da Infraestrutura
